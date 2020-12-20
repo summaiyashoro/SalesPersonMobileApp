@@ -16,7 +16,7 @@ import SaveButton from '../buttons/SaveButton';
 import LoginButton from '../buttons/LoginButton';
 import colors from '../config/colors';
 
-import MyAppTextInput from '../auth/MyAppTextInput';
+import MyAppTextInput from '../components/MyAppTextInput';
 
 const validationSchema = yup.object({
     password: yup.string().required().min(8).max(20).label('Password'),

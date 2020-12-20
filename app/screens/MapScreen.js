@@ -2,7 +2,7 @@ import React from 'react';
 import Screen from './Screen';
 import Map from '../map/Map';
 
-function MapScreen(props) {
+function MapScreen() {
     return (
         <Screen>
         <Map/>

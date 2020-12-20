@@ -11,7 +11,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import { Formik } from 'formik';
 import * as yup from 'yup';
 
-import MyAppTextInput from './MyAppTextInput';
+import MyAppTextInput from '../components/MyAppTextInput';
 import ForgetPasswordButton from './ForgetPasswordButton';
 import LoginButton from '../buttons/LoginButton';
 import ErrorMessage from '../components/ErrorMessage';

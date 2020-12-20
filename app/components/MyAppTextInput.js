@@ -10,7 +10,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import Icon from 'react-native-vector-icons/Ionicons';
 
 import colors from '../config/colors';
-import InputField from '../components/InputField';
+import InputField from './InputField';
 
 const MyAppTextInput = ({ iconLeft, iconRight, onPress, placeholder, value, leftPlaceholderPadding,...otherProps }) => {
     const [isFocus, setFocus] = useState(false);

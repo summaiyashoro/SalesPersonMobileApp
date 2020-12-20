@@ -7,7 +7,7 @@ import HomeButton from './HomeButton';
 
 
 import SettingsStackNavigator from './SettingsStackNavigator';
-// import MapStackNavigator from "./MapStackNavigator";
+import MapStackNavigator from "./MapStackNavigator";
 import NotificationsStackNavigator from "./NotificationsStackNavigator";
 import HistoryStackNavigator from "./HistoryStackNavigator";
 
@@ -40,7 +40,7 @@ const TabNavigation = () => {
 
             <Tab.Screen
                 name="Maps"
-                component={HomeScreen}
+                component={MapStackNavigator}
                 options={{
                     tabBarIcon: ({ color, size }) => (
                         <MaterialCommunityIcons name="map-marker"
