@@ -1,5 +1,5 @@
 import React from 'react';
-import {SafeAreaView, StyleSheet} from 'react-native';
+import {SafeAreaView, StyleSheet, Platform} from 'react-native';
 
 function Screen({children , ...otherProps}) {
     return (
@@ -13,7 +13,7 @@ function Screen({children , ...otherProps}) {
 
 const styles = StyleSheet.create({
     screen:{
-      flex:1
+      flex:1,
     }
 })
 

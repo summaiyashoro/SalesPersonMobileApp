@@ -2,7 +2,7 @@ import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import Icon from 'react-native-vector-icons/Ionicons';
 
-import MapScreen from '../screens/MapScreen';
+import MapScreen from '../map/MapScreen';
 import colors from '../config/colors';
 
 const Stack = createStackNavigator();

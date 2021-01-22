@@ -1,4 +1,3 @@
-
 import React from 'react';
 import {
   SafeAreaView,
@@ -9,13 +8,10 @@ import {
   StatusBar,
 } from 'react-native';
 
-
 import {NavigationContainer} from '@react-navigation/native';
 import AuthStackNavigator from '../app/navigation/AuthStackNavigator';
 import NavigationTheme from '../app/navigation/NavigationTheme';
-
 import colors from './config/colors';
-
 
 const App = () => {
   return ( 

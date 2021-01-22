@@ -2,7 +2,7 @@ import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import Icon from 'react-native-vector-icons/Ionicons';
 
-import NotificationsScreen from '../screens/NotificationsScreen';
+import NotificationsScreen from '../notification/NotificationsScreen';
 import NotificationsDetailsScreen from '../notification/NotificationsDetailsScreen';
 
 import colors from '../config/colors';

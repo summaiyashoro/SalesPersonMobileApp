@@ -1,6 +1,7 @@
 import React from 'react';
 import { FlatList } from 'react-native';
 
+import Screen from '../screens/Screen';
 import NotificationItem from "./NotificationItem";
 import Separator from "../components/Separator";
 
@@ -85,28 +86,25 @@ const notification = [
 
 ]
 
-
-
-
-function Notifications({navigation}) {
+function NotificationsScreen({ navigation }) {
   return (
-    <FlatList
-      data={notification}
-      keyExtractor={notification => notification.id.toString()}
-      renderItem={({ item }) => (
-        <NotificationItem
-          title={item.title}
-          subTitle={item.subTitle}
-          profileImage={item.profileImage}
-          timeofArrival={item.timeofArrival}
-          navigation={navigation}
-        />
-      )}
-      ItemSeparatorComponent={Separator}
-    />
+    <Screen marginHorizontal={10}>
+      <FlatList
+        data={notification}
+        keyExtractor={notification => notification.id.toString()}
+        renderItem={({ item }) => (
+          <NotificationItem
+            title={item.title}
+            subTitle={item.subTitle}
+            profileImage={item.profileImage}
+            timeofArrival={item.timeofArrival}
+            navigation={navigation}
+          />
+        )}
+        ItemSeparatorComponent={Separator}
+      />
+    </Screen>
   );
 }
 
-
-
-export default Notifications;
+export default NotificationsScreen;

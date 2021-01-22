@@ -80,7 +80,7 @@ const history = [
 ]
 
 
-function History(props) {
+function HistoryScreen(props) {
     return (
          <FlatList
           data={history}
@@ -102,4 +102,4 @@ function History(props) {
     
 
 
-export default History;
+export default HistoryScreen;

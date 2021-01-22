@@ -1,8 +1,8 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 
-import AccountSettingsScreen from '../screens/AccountSettingsScreen';
-import SettingsScreen from '../screens/SettingsScreen';
+import AccountSettingsScreen from '../accountsettings/AccountSettingsScreen';
+import SettingsScreen from '../settings/SettingsScreen';
 import colors from '../config/colors';
 
 const  Stack = createStackNavigator();
