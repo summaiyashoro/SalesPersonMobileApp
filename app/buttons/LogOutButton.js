@@ -1,13 +1,13 @@
 import React from 'react';
 import { 
     View, 
-    Text, 
     StyleSheet, 
     TouchableOpacity 
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 import colors from '../config/colors';
+import AppText from "../components/AppText";
 
 function LogOutButton({ title, onPress }) {
     return (
@@ -19,7 +19,7 @@ function LogOutButton({ title, onPress }) {
                     size={20}
                     style={{ transform: [{ rotateY: '180deg' }] }}
                 />
-                <Text style={styles.text}>{title}</Text>
+                <AppText style={styles.text}>{title}</AppText>
             </View>
         </TouchableOpacity>
     );

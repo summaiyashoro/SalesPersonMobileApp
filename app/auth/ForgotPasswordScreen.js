@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { 
-    Text, 
     View, 
     StyleSheet, 
     KeyboardAvoidingView, 
@@ -14,6 +13,7 @@ import * as yup from 'yup';
 import ErrorMessage from '../components/ErrorMessage';
 import SaveButton from '../buttons/SaveButton';
 import LoginButton from '../buttons/LoginButton';
+import AppText from "../components/AppText";
 import colors from '../config/colors';
 
 import MyAppTextInput from '../components/MyAppTextInput';
@@ -44,7 +44,7 @@ const ForgetPasswordScreen = ({navigation}) =>{
             <TouchableWithoutFeedback onPress={Keyboard.dismiss} >
 
                 <KeyboardAvoidingView style={styles.footer}>
-                    <Text style={styles.text} >Create new password</Text>
+                    <AppText style={styles.text} >Create new password</AppText>
                     <Formik
                         initialValues={{ password: "", confirmPassword: "" }}
                         validationSchema={validationSchema}

@@ -2,10 +2,10 @@ import React from 'react';
 import {
   StyleSheet,
   TouchableOpacity,
-  Text,
 } from 'react-native';
 
 import LinearGradient from 'react-native-linear-gradient';
+import AppText from "../components/AppText";
 import colors from '../config/colors';
 
 function AppButton({ title, onPress, ...otherProps }) {
@@ -18,7 +18,7 @@ function AppButton({ title, onPress, ...otherProps }) {
         style={styles.container}
         {...otherProps}
       >
-        <Text style={styles.text} >{title}</Text>
+        <AppText style={styles.text} >{title}</AppText>
 
       </LinearGradient>
     </TouchableOpacity>

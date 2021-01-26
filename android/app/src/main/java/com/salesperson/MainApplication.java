@@ -13,6 +13,7 @@ import java.util.List;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.BV.LinearGradient.LinearGradientPackage;
 import com.airbnb.android.react.maps.MapsPackage;
+import org.devio.rn.splashscreen.SplashScreenReactPackage;
 
 
 public class MainApplication extends Application implements ReactApplication {
@@ -32,6 +33,7 @@ public class MainApplication extends Application implements ReactApplication {
           // packages.add(new MyReactNativePackage());
           new VectorIconsPackage();
           new LinearGradientPackage();
+          new SplashScreenReactPackage();
           return packages;
         }
 

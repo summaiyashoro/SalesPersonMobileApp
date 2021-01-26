@@ -1,4 +1,3 @@
-//custom navigation theme , override builtin navigation theme
 import {DefaultTheme} from '@react-navigation/native';
 import colors from '../config/colors';
 

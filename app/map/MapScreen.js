@@ -11,6 +11,7 @@ import {
 import MapView, { PROVIDER_GOOGLE, Marker, Polyline } from 'react-native-maps';
 import Geolocation from 'react-native-geolocation-service';
 
+import defaultProfileUri from "../components/defaultProfile";
 
 class MapScreen extends React.Component {
   mounted = false;
@@ -137,7 +138,7 @@ class MapScreen extends React.Component {
               }}
             >
               <View>
-                <Image source={require('../assets/defaultProfile.png')} style={{ width: 30, height: 30, borderRadius: 15 }} />
+                <Image source={{uri:defaultProfileUri}} style={{ width: 30, height: 30, borderRadius: 15 }} />
               </View>
             </Marker>
             <Polyline

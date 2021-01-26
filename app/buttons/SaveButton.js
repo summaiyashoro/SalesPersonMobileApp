@@ -2,20 +2,19 @@ import React from 'react';
 import {
   StyleSheet,
   TouchableOpacity,
-  Text,
 } from 'react-native';
 
 
 import colors from '../config/colors';
 import { useFormikContext } from 'formik';
-
+import AppText from "../components/AppText";
 
 function SaveButton({ title, onPress }) {
   const { handleSubmit } = useFormikContext();
 
   return (
     <TouchableOpacity onPress={handleSubmit} style={styles.container}>
-      <Text style={styles.text}>{title}</Text>
+      <AppText style={styles.text}>{title}</AppText>
     </TouchableOpacity>
   )
 }

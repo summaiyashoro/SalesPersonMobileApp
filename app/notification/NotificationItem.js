@@ -1,24 +1,23 @@
-import React, { useState } from 'react';
-import { View, StyleSheet, Image, Text, Modal, Pressable,TouchableWithoutFeedback, SafeAreaView, Dimensions } from 'react-native';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import React from 'react';
+import { View, StyleSheet, Image, Pressable} from 'react-native';
 
 import colors from '../config/colors';
-import defaultProfile from "../components/defaultProfile";
-
+import AppText from "../components/AppText";
+import defaultProfileUri from "../components/defaultProfile";
 
 const NotificationItem = ({ title, subTitle, profileImage, timeofArrival, navigation }) => {
 
     return (
         <View style={styles.container} >
-            <Image source={{ uri: profileImage ? profileImage : defaultProfile.defaultProfileUri }} style={styles.image} />
+            <Image source={{ uri: profileImage ? profileImage : defaultProfileUri }} style={styles.image} />
 
             <View style={styles.content}>
                 <Pressable onPress={() => navigation.navigate('NotificationsDetailsScreen',{title, subTitle, profileImage})}>
                     <View style={styles.header}>
-                        <Text style={styles.title} numberOfLines={1} >{title}</Text>
-                        <Text style={styles.time} numberOfLines={1} >{timeofArrival} ago</Text>
+                        <AppText style={styles.title} numberOfLines={1} >{title}</AppText>
+                        <AppText style={styles.time} numberOfLines={1} >{timeofArrival} ago</AppText>
                     </View>
-                    <Text style={styles.subtitle} numberOfLines={3} >{subTitle}</Text>
+                    <AppText style={styles.subtitle} numberOfLines={3} >{subTitle}</AppText>
                 </Pressable>
             </View>
         </View>
@@ -52,10 +51,12 @@ const styles = StyleSheet.create({
     subtitle: {
         color: colors.medium,
         paddingRight: 2,
+        fontSize:14
     },
     title: {
+        color:colors.dark,
         fontSize: 16,
-        fontWeight: 'bold',
+        fontWeight: '700',
         flexShrink: 1,
         width: '100%',
         paddingRight: 2

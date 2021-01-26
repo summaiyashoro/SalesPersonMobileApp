@@ -1,4 +1,3 @@
-
 import React, { useRef, useState, useEffect } from 'react';
 import { 
     View, 
@@ -10,6 +9,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import Icon from 'react-native-vector-icons/Ionicons';
 
 import colors from '../config/colors';
+import AppText from "../components/AppText";
 import InputField from '../components/InputField';
 
 const MyAppTextInput = ({ iconLeft, iconRight, onPress, placeholder, value, leftPlaceholderPadding,...otherProps }) => {

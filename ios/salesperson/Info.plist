@@ -39,12 +39,10 @@
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>salesperson need access to location for maps feature to work</string>
-
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>salesperson would like to access the photo library</string>
 	<key>NSCameraUsageDescription</key>
-    <string>salesperson require camera access to take photo</string>
-
+	<string>salesperson require camera access to take photo</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -59,11 +57,10 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-
 	<key>UIAppFonts</key>
-    <array>
-	  <string>MaterialCommunityIcons.ttf</string>
-	  <string>Ionicons.ttf</string>
+	<array>
+		<string>MaterialCommunityIcons.ttf</string>
+		<string>Ionicons.ttf</string>
 	</array>
 </dict>
 </plist>

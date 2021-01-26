@@ -1,13 +1,14 @@
 import React from 'react';
-import { View, StyleSheet, Text} from 'react-native';
+import { View, StyleSheet} from 'react-native';
 
 import AppSwitch from '../components/AppSwitch';
+import AppText from "../components/AppText";
 import colors from '../config/colors';
  
 function SettingSwitch({title}) {
     return (
        <View style={styles.container}>
-           <Text style={styles.text}>{title}</Text>
+           <AppText style={styles.text}>{title}</AppText>
            <AppSwitch/>
        </View>
     );

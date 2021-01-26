@@ -1,11 +1,11 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
-
+import {View, StyleSheet} from 'react-native';
+import AppText from "../components/AppText";
 
 function HomeScreen(props) {
     return (
         <View>
-            <Text style={styles.text}>Home Screen</Text>
+            <AppText style={styles.text}>Home Screen</AppText>
         </View>
     );
 }

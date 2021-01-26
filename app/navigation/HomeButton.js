@@ -1,8 +1,9 @@
 import React from 'react';
-import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
+import { View, StyleSheet, TouchableOpacity } from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import colors from '../config/colors';
+import AppText from "../components/AppText";
 
 const HomeButton = ({ onPress }) => {
     return (
@@ -11,10 +12,10 @@ const HomeButton = ({ onPress }) => {
                 <View style={styles.iconContainer}>
                     <MaterialCommunityIcons name="home"
                         color={colors.white}
-                        size={30}
+                        size={28}
                     />
                 </View>
-                <Text style={styles.text}>Home</Text>
+                <AppText style={styles.text}>Home</AppText>
             </View>
         </TouchableOpacity>
     );
@@ -26,20 +27,20 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     },
     iconContainer: {
-        backgroundColor: colors.medium,
-        width: 60,
-        height: 60,
+        backgroundColor: colors.light,
+        width: 58,
+        height: 58,
         borderRadius: 30,
         bottom: 7,
         borderColor: colors.white,
-        borderWidth: 10,
+        borderWidth: 9,
         alignItems: 'center',
         justifyContent: 'center',
     },
     text: {
         fontSize: 10,
-        color: colors.medium,
-        bottom: 19,
+        color: colors.light,
+        bottom: 17,
         textAlign: 'center'
     }
 })

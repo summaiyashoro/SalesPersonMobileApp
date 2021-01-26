@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { 
-  Text, 
   Dimensions,
   View, 
   TouchableOpacity, 
@@ -14,15 +13,16 @@ import {
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import ImagePicker from 'react-native-image-crop-picker';
 
+import AppText from "../components/AppText";
 import ModalCircle from './ModalCircle';
 import colors from '../config/colors';
 
-import defaultProfile from "../components/defaultProfile";
+import defaultProfileUri from "../components/defaultProfile";
 
 const ImageUpload = () =>{
   const [modalProfileVisible, setModalProfileVisible] = useState(false);
   const [modalVisible, setModalVisible] = useState(false);
-  const [image, setImage] = useState(defaultProfile.defaultProfileUri);
+  const [image, setImage] = useState(defaultProfileUri);
 
 
   const choosePhotoFromCamera = () => {
@@ -78,7 +78,7 @@ const ImageUpload = () =>{
 
         <TouchableOpacity style={styles.changeButton} onPress={() => setModalVisible(true)}>
           <MaterialCommunityIcons name="camera-image" size={20} color={colors.white} />
-          <Text style={styles.text}>Change</Text>
+          <AppText style={styles.text}>Change</AppText>
         </TouchableOpacity>
 
         <Modal
@@ -90,12 +90,12 @@ const ImageUpload = () =>{
           <TouchableWithoutFeedback onPress={() => setModalVisible(false)}>
             <View style={{ flex: 1, backgroundColor: colors.blackLight }} >
               <View style={styles.modal} >
-                <Text style={{ fontSize: 18, fontWeight: "bold" }}>Upload Photo</Text>
+                <AppText style={{fontWeight: "700" }}>Upload Photo</AppText>
                 <View style={{ flexDirection: 'row', margin: 5 }}>
 
-                  <ModalCircle onPress={choosePhotoFromCamera} icon="camera" title="Camera" backgroundColor="#339933" />
-                  <ModalCircle onPress={choosePhotoFromGallery} icon="image" title="Gallery" backgroundColor="#bf4080" />
-                  <ModalCircle onPress={() => console.log('photo deleted')} icon="trash" title="Remove" backgroundColor="#ff471a" />
+                  <ModalCircle onPress={choosePhotoFromCamera} icon="camera" title="Camera" backgroundColor={colors.greenLight} />
+                  <ModalCircle onPress={choosePhotoFromGallery} icon="image" title="Gallery" backgroundColor={colors.purple} />
+                  <ModalCircle onPress={() => console.log('photo deleted')} icon="trash" title="Remove" backgroundColor={colors.orangeColor} />
 
                 </View>
               </View>
@@ -115,7 +115,7 @@ const ImageUpload = () =>{
             <TouchableWithoutFeedback onPress={() => setModalProfileVisible(false)}>
               <MaterialCommunityIcons name="arrow-left" size={30} color={colors.white} />
             </TouchableWithoutFeedback>
-            <Text style={styles.profileText}>Profile</Text>
+            <AppText style={styles.profileText}>Profile</AppText>
           </View>
           <Image style={styles.profileImage} source={{ uri: image }} />
         </SafeAreaView>
@@ -140,9 +140,9 @@ const styles = StyleSheet.create({
     width: 120,
     height: 120,
     borderRadius: 75,
-    backgroundColor: '#808080AA',
-    borderWidth: 1,
-    borderColor: '#808080AA',
+    // backgroundColor: '#808080AA',
+    // borderWidth: 1,
+    // borderColor: '#808080AA',
     justifyContent: 'center',
     alignItems: 'center'
   },

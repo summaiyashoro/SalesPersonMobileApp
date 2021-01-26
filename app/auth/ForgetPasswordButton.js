@@ -1,14 +1,15 @@
 import React from 'react';
 import {
-    Text , 
     TouchableOpacity , 
     StyleSheet
 } from 'react-native';
 
+import AppText from "../components/AppText";
+
 const ForgetPasswordButton = ({title, onPress, ...otherProps}) => {
     return (
         <TouchableOpacity style={{marginVertical:5}} onPress={onPress}>
-         <Text style={styles.text} {...otherProps} >{title}</Text>         
+         <AppText style={styles.text} {...otherProps} >{title}</AppText>         
         </TouchableOpacity>  
     );
 }

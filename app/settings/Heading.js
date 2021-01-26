@@ -1,10 +1,12 @@
 import React from 'react';
-import { Text, StyleSheet} from 'react-native';
-
+import {StyleSheet, View} from 'react-native';
+import AppText from "../components/AppText";
 
 function Heading({heading}) {
     return (
-         <Text style={styles.text}>{heading}</Text>
+        <View>
+            <AppText style={styles.text}>{heading}</AppText>
+        </View>
     );
 }
 const styles = StyleSheet.create({

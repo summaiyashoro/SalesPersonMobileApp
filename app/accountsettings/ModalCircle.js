@@ -2,11 +2,11 @@ import React from 'react';
 import { 
   View, 
   StyleSheet, 
-  Text, 
   TouchableOpacity 
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons'
 
+import AppText from "../components/AppText";
 import colors from '../config/colors';
 
 const ModalCircle = ({ onPress, icon, title, ...otherProps }) => {
@@ -16,14 +16,14 @@ const ModalCircle = ({ onPress, icon, title, ...otherProps }) => {
       <View style={styles.circle} {...otherProps}>
         <Icon name={icon} size={20} color={colors.white} />
       </View>
-      <Text style={styles.modalText}> {title} </Text>
+      <AppText style={styles.modalText}> {title} </AppText>
     </TouchableOpacity>
   );
 }
 
 const styles = StyleSheet.create({
   modalText: {
-    color: colors.black,
+    color: colors.dark,
     fontSize: 14,
     padding: 4
   },

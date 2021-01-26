@@ -4,12 +4,18 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 import HistoryScreen from '../history/HistoryScreen';
 import colors from '../config/colors';
+import { Platform } from 'react-native';
 
 const Stack = createStackNavigator();
 
 
 const HistoryStackNavigator = ({ navigation }) => (
   <Stack.Navigator screenOptions={({ navigation }) => ({
+    headerTitleStyle:{
+      fontFamily:Platform.OS === 'android' ? 'OpenSans-Regular' : 'Avenir',
+      fontSize:20,
+      fontWeight:'700'
+     },
     headerStyle: {
       shadowColor: 'transparent',
       backgroundColor: colors.primary,

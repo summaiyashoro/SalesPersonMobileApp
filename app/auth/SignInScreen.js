@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import {
-   Text, 
    View, 
    StyleSheet, 
    KeyboardAvoidingView, 
@@ -15,6 +14,7 @@ import MyAppTextInput from '../components/MyAppTextInput';
 import ForgetPasswordButton from './ForgetPasswordButton';
 import LoginButton from '../buttons/LoginButton';
 import ErrorMessage from '../components/ErrorMessage';
+import AppText from "../components/AppText";
 import AppButton from '../buttons/AppButton';
 import colors from '../config/colors';
 
@@ -45,7 +45,7 @@ const SignInScreen = ({ navigation }) => {
       <KeyboardAvoidingView style={styles.container}>
         <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
           <View style={styles.header}>
-            <Text style={styles.headerText}>Moving Trail Solutions</Text>
+            <AppText style={styles.headerText}>Moving Trail Solutions</AppText>
           </View>
         </TouchableWithoutFeedback>
         <View style={styles.footer}>

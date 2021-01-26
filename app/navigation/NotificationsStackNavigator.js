@@ -13,6 +13,11 @@ const NotificationsStackNavigator = () => (
   <Stack.Navigator 
   initialRouteName="Notifications"
   screenOptions={{
+    headerTitleStyle:{
+      fontFamily:Platform.OS === 'android' ? 'OpenSans-Regular' : 'Avenir',
+      fontSize:20,
+      fontWeight:'700'
+     },
     headerStyle: {
       shadowColor: 'transparent',
       backgroundColor: colors.primary,

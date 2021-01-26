@@ -11,4 +11,6 @@ export default{
     danger:"#ff1a1a",  //red
     orangeColor:"#ff471a",  //orange
     dangerLight:"#ff3333",
+    greenLight:"#339933",
+    purple:"#bf4080"
 }

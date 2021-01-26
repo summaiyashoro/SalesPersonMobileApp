@@ -1,15 +1,13 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import {
     View,
     StyleSheet,
     TouchableWithoutFeedback,
-    Text
 } from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import colors from '../config/colors';
 import AppText from "./AppText";
-
 
 const AppPicker = ({ title, onPress }) =>{
     return (

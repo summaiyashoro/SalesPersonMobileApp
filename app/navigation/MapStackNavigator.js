@@ -4,11 +4,17 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 import MapScreen from '../map/MapScreen';
 import colors from '../config/colors';
+import { Platform } from 'react-native';
 
 const Stack = createStackNavigator();
 
 const MapStackNavigator = () => (
   <Stack.Navigator screenOptions={{
+    headerTitleStyle:{
+      fontFamily:Platform.OS === 'android' ? 'OpenSans-Regular' : 'Avenir',
+      fontSize:20,
+      fontWeight:'700'
+     },
     headerStyle: {
       shadowColor: 'transparent',
       backgroundColor: colors.primary,

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, View, ScrollView, StyleSheet } from 'react-native';
+import {ScrollView, StyleSheet } from 'react-native';
 
 import AccountSettingHeader from './AccountSettingHeader';
 import Heading from './Heading';
@@ -9,9 +9,9 @@ import AppPicker from '../components/AppPicker';
 import LogOutButton from '../buttons/LogOutButton';
 import AppButton from '../buttons/AppButton';
 
+import defaultProfileUri from "../components/defaultProfile"; 
 
-const image = require('../assets/defaultProfile.png');
-const imageSource = Image.resolveAssetSource(image).uri;
+const imageSource = defaultProfileUri;
 import Screen from '../screens/Screen';
 
 function SettingScreen({ navigation }) {
