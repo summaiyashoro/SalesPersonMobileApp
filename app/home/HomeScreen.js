@@ -1,5 +1,6 @@
-import React from 'react';
+import React ,{useState, useEffect} from 'react';
 import { View, Text, ScrollView, StyleSheet } from "react-native";
+import DeviceInfo from "react-native-device-info";
 
 import AppText from "../components/AppText";
 import Separator from "../components/Separator";
@@ -8,7 +9,21 @@ import WorkingHours from "../components/WorkingHours";
 import Activity from './Activity';
 import colors from "../config/colors";
 
-function HomeScreen(props) {
+function HomeScreen({navigation}) {
+    const [level , setlevel] =  useState();
+
+    getBatteryStatus = () => {
+      DeviceInfo.getBatteryLevel().then((batteryLevel) => {
+        const percentage = (batteryLevel * 100).toFixed(0);
+        setlevel(percentage);
+        console.log(percentage);
+      });
+    }
+  
+    useEffect(() => {
+        getBatteryStatus();
+    });
+
     return (
         <ScrollView showsVerticalScrollIndicator={false}>
             <View style={styles.container}>
@@ -38,10 +53,10 @@ function HomeScreen(props) {
                     </View>
 
                     <View style={{ flex: 1, flexDirection: 'column', marginHorizontal:5 }}>
-                        <HistoryOfSalesman date="27th jan 2020" time="10:00 AM" status="Active" />
-                        <HistoryOfSalesman date="7th jan 2020" time="10:00 AM" status="Active" />
-                        <HistoryOfSalesman date="7th jan 2020" time="10:00 AM" status="Active" />
-                        <HistoryOfSalesman date="7th jan 2020" time="10:00 AM" status="Active" />
+                        <HistoryOfSalesman date="27th jan 2020" time="10:00 AM" status="Active" navigation={navigation}/>
+                        <HistoryOfSalesman date="7th jan 2020" time="10:00 AM" status="Active" navigation={navigation} />
+                        <HistoryOfSalesman date="7th jan 2020" time="10:00 AM" status="Active" navigation={navigation} />
+                        <HistoryOfSalesman date="7th jan 2020" time="10:00 AM" status="Active" navigation={navigation} />
                     </View>
 
                 </View>

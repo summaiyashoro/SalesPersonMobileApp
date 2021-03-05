@@ -4,7 +4,7 @@ import { Switch } from "react-native-switch";
 import colors from '../config/colors';
 
 function SwitchWithText({title, px,status}) {
-    const [currentstatus, setStatus] = useState(true);
+    const [currentstatus, setStatus] = useState();
     const getStyle = () => {
       switch (status) {
           case 'active':

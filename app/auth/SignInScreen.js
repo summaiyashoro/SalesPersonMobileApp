@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import {
-   View, 
-   StyleSheet, 
-   KeyboardAvoidingView, 
-   TouchableWithoutFeedback, 
-   Keyboard 
-  } from 'react-native';
+  View,
+  StyleSheet,
+  KeyboardAvoidingView,
+  TouchableWithoutFeedback,
+  Keyboard
+} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import { Formik } from 'formik';
 import * as yup from 'yup';
@@ -26,13 +26,13 @@ const validationSchema = yup.object({
 
 const SignInScreen = ({ navigation }) => {
   const [passwordIcon, setPasswordIcon] = useState("eye-off");
- 
- function handleSubmit  (values){
-    if(values.email.length > 0 && values.password.length > 0 ){
+
+  function handleSubmit(values) {
+    if (values.email.length > 0 && values.password.length > 0) {
       navigation.replace('logedIn')
     }
   }
-  
+
 
   return (
     <LinearGradient
@@ -89,7 +89,7 @@ const SignInScreen = ({ navigation }) => {
                 <ErrorMessage error={props.errors.password} touch={props.touched.password} />
 
                 <LoginButton title="Login" />
-                
+
                 <ForgetPasswordButton
                   title="Forgot Password"
                   onPress={() => navigation.navigate('ForgotPassword')}

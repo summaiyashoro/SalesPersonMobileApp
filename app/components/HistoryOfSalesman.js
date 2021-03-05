@@ -4,14 +4,14 @@ import { View, StyleSheet, TouchableOpacity } from "react-native";
 import colors from "../config/colors";
 import AppText from "./AppText";
 
-function HistoryOfSalesman({date,time,status}) {
+function HistoryOfSalesman({date,time,status, navigation}) {
     return (
         <View style={{ flex: 1, flexDirection:'row'}}>
             <AppText style={styles.text}>{date}</AppText>
             <AppText style={styles.text}>{time}</AppText>
             <AppText style={[styles.text, {color:colors.lightGreen }]}>{status}</AppText>
 
-            <TouchableOpacity>
+            <TouchableOpacity onPress={()=> navigation.navigate('Maps')}>
             <AppText style={styles.text}>View Map</AppText>
             </TouchableOpacity>
         </View>

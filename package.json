@@ -17,6 +17,7 @@
     "formik": "^2.2.5",
     "react": "16.13.1",
     "react-native": "0.63.4",
+    "react-native-device-info": "^8.0.2",
     "react-native-geolocation-service": "^5.1.1",
     "react-native-gesture-handler": "^1.9.0",
     "react-native-image-crop-picker": "^0.35.1",

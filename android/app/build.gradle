@@ -144,6 +144,7 @@ android {
         vectorDrawables.useSupportLibrary = true
 
         manifestPlaceholders = [googleMapApiKey: googleMapApiKey]
+        multiDexEnabled true
     }
     splits {
         abi {
