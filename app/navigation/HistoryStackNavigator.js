@@ -1,10 +1,10 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import Icon from 'react-native-vector-icons/Ionicons';
+import { Platform } from 'react-native';
 
 import HistoryScreen from '../history/HistoryScreen';
 import colors from '../config/colors';
-import { Platform } from 'react-native';
 
 const Stack = createStackNavigator();
 

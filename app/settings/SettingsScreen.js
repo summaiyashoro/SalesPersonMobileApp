@@ -26,10 +26,10 @@ function SettingScreen({ navigation }) {
                 <SettingSwitch title="Status" />
                 <Separator />
 
-                <AppPicker title="Privacy Policy" onPress={() => console.log("go to privacy policy")} />
+                <AppPicker title="Privacy Policy" onPress={() => navigation.navigate('PrivacyPolicy')} />
                 <Separator />
 
-                <AppPicker title="Terms of use" onPress={() => console.log("go to Terms of use")} />
+                <AppPicker title="Terms of use" onPress={() => navigation.navigate('TermsOfUse')} />
                 <Separator />
 
                 <Heading heading="App" />

@@ -122,6 +122,10 @@ def jscFlavor = 'org.webkit:android-jsc:+'
  */
 def enableHermes = project.ext.react.get("enableHermes", false);
 
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+def googleMapApiKey = properties.getProperty('google.map.key');
+
 android {
     ndkVersion '21.1.6352462'
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -138,6 +142,8 @@ android {
         versionCode 1
         versionName "1.0"
         vectorDrawables.useSupportLibrary = true
+
+        manifestPlaceholders = [googleMapApiKey: googleMapApiKey]
     }
     splits {
         abi {
